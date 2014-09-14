@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="ComPerCloudService" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="4" osVersion="*" schemaVersion="2014-01.2.3">
+  <Role name="ComPerWorkerRole">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=quietworldstorage;AccountKey=4PYmgn4hR4GCpn4wFr+Lv1ifX7tiKXefcRyWJDF3iHv/haNd6q/UHtr5P6sqg5l9fNhJRHKgqxVi4BhS5SkMPA==" />
+    </ConfigurationSettings>
+  </Role>
+  <Role name="ComPerWebRole">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=quietworldstorage;AccountKey=4PYmgn4hR4GCpn4wFr+Lv1ifX7tiKXefcRyWJDF3iHv/haNd6q/UHtr5P6sqg5l9fNhJRHKgqxVi4BhS5SkMPA==" />
+    </ConfigurationSettings>
+  </Role>
+</ServiceConfiguration>

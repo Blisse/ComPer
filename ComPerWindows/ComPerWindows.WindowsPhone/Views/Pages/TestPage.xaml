@@ -1,0 +1,29 @@
+﻿<local:BaseViewModelPage
+    x:Class="ComPerWindows.Views.Pages.TestPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ComPerWindows.Views.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    DataContext="{Binding Source={StaticResource Locator}, Path=TestPage}">
+
+    <Grid Margin="20,10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Button Grid.Row="0" Command="{Binding GetSmallHttpCommand}" Content="Small Http"/>
+        <Button Grid.Row="1" Command="{Binding GetSmallStreamCommand}" Content="Small Stream"/>
+
+        <Button Grid.Row="2" Command="{Binding GetLargeHttpCommand}" Content="Large Http"/>
+        <Button Grid.Row="3" Command="{Binding GetLargeStreamCommand}" Content="Large Stream"/>
+        <Button Grid.Row="4" Command="{Binding SaveCommand}" Content="Save"/>
+    </Grid>
+    
+</local:BaseViewModelPage>
